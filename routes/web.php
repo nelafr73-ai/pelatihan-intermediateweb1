@@ -3,7 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BranchMapController;
 
-Route::get('/peta', [BranchMapController::class, 'index']);
+
+// routes/web.php
+Route::get('/peta', [BranchMapController::class, 'peta']);
+Route::put('/cabang/{branch}', [BranchMapController::class, 'update']);
 
 Route::get('/profil', function () {
     return view('welcome');
